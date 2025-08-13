@@ -1,1 +1,5 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/sheet-music-search.ts';
+import '@/ai/flows/blog-content-moderation.ts';
