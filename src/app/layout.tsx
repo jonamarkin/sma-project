@@ -5,7 +5,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Harmonia Africa - African Sheet Music & Choral Events',
+  title: 'Sheet Music Africa - African Sheet Music & Choral Events',
   description:
     'A one-stop platform for sheet music from Africa. Purchase scores, list choral events, and read blogs on the African music scene.',
 };

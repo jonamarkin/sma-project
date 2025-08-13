@@ -30,7 +30,7 @@ const prompt = ai.definePrompt({
   name: 'moderateBlogContentPrompt',
   input: {schema: ModerateBlogContentInputSchema},
   output: {schema: ModerateBlogContentOutputSchema},
-  prompt: `You are a blog content moderator for Harmonia Africa, a platform for African sheet music and choral events.
+  prompt: `You are a blog content moderator for Sheet Music Africa, a platform for African sheet music and choral events.
 
   Your task is to review the provided blog content and determine if it meets the platform's content guidelines.
 

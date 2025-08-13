@@ -11,11 +11,11 @@ export function Footer() {
           <div className="flex items-center space-x-2">
             <Music className="h-6 w-6 text-primary" />
             <span className="font-bold font-headline text-lg">
-              Harmonia Africa
+              Sheet Music Africa
             </span>
           </div>
           <p className="text-sm text-foreground/60">
-            &copy; {currentYear} Harmonia Africa. All rights reserved.
+            &copy; {currentYear} Sheet Music Africa. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
             <Link href="/privacy" className="text-sm text-foreground/60 hover:text-primary">

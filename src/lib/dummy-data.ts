@@ -161,11 +161,11 @@ export const blogData: BlogPost[] = [
   {
     slug: 'preserving-our-musical-heritage-the-digital-archive-project',
     title: 'Preserving Our Musical Heritage: The Digital Archive Project',
-    author: 'The Harmonia Africa Team',
+    author: 'The Sheet Music Africa Team',
     publishedDate: 'July 15, 2024',
-    excerpt: 'Harmonia Africa is proud to announce the launch of our Digital Archive Project, an initiative to digitize and preserve rare and unpublished African sheet music...',
-    content: '<p>Harmonia Africa is proud to announce the launch of our Digital Archive Project, an initiative to digitize and preserve rare and unpublished African sheet music. For centuries, much of our continent\'s musical heritage has been passed down orally or existed in fragile manuscripts, vulnerable to loss and decay. This project aims to safeguard these cultural treasures for future generations.</p><p>Working with libraries, universities, and private collectors across the continent, we are creating high-quality digital scans of these works and making them accessible to musicians, scholars, and the public. This is a monumental task, and we are calling on our community to help. Learn more about how you can contribute to this vital effort to protect and celebrate Africa\'s musical legacy.</p>',
+    excerpt: 'Sheet Music Africa is proud to announce the launch of our Digital Archive Project, an initiative to digitize and preserve rare and unpublished African sheet music...',
+    content: '<p>Sheet Music Africa is proud to announce the launch of our Digital Archive Project, an initiative to digitize and preserve rare and unpublished African sheet music. For centuries, much of our continent\'s musical heritage has been passed down orally or existed in fragile manuscripts, vulnerable to loss and decay. This project aims to safeguard these cultural treasures for future generations.</p><p>Working with libraries, universities, and private collectors across the continent, we are creating high-quality digital scans of these works and making them accessible to musicians, scholars, and the public. This is a monumental task, and we are calling on our community to help. Learn more about how you can contribute to this vital effort to protect and celebrate Africa\'s musical legacy.</p>',
     imageUrl: 'https://placehold.co/800x500.png',
-    tags: ['Preservation', 'Community', 'Harmonia Africa'],
+    tags: ['Preservation', 'Community', 'Sheet Music Africa'],
   },
 ];

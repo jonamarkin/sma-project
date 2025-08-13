@@ -11,7 +11,7 @@ export default function UploadPage() {
       <Card>
         <CardHeader>
           <CardTitle className="font-headline text-3xl">Upload Your Composition</CardTitle>
-          <CardDescription>Share your music with the world. Fill out the details below to list your sheet music on Harmonia Africa.</CardDescription>
+          <CardDescription>Share your music with the world. Fill out the details below to list your sheet music on Sheet Music Africa.</CardDescription>
         </CardHeader>
         <CardContent>
           <form className="space-y-8">

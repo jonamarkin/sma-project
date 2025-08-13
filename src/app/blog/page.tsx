@@ -7,7 +7,7 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-12 sm:py-16">
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-headline text-4xl font-bold text-primary sm:text-5xl">Harmonia Africa Blog</h1>
+        <h1 className="font-headline text-4xl font-bold text-primary sm:text-5xl">Sheet Music Africa Blog</h1>
         <p className="mt-2 max-w-2xl text-lg text-foreground/70">
           Stories, insights, and news from the heart of Africa's choral and classical music scene.
         </p>
