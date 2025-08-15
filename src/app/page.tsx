@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-card to-background">
+      <section className="bg-gradient-to-b from-card to-background overflow-hidden">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-20 lg:grid-cols-2 lg:py-32">
           <div className="text-center lg:text-left">
             <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
@@ -38,15 +38,33 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative h-80 w-full lg:h-full">
+          <div className="relative h-80 w-full lg:h-[500px]">
              <Image 
                 src="https://placehold.co/800x600.png"
-                alt="African musicians playing guitars in front of sheet music"
+                alt="African choir singing"
                 fill
                 priority
                 className="rounded-lg object-cover shadow-2xl"
-                data-ai-hint="african musicians"
+                data-ai-hint="african choir"
               />
+              <div className="absolute -bottom-8 -left-12 w-48 h-32 transform -rotate-12">
+                 <Image 
+                    src="https://placehold.co/400x300.png"
+                    alt="African composer writing music"
+                    fill
+                    className="rounded-lg object-cover shadow-xl border-4 border-card"
+                    data-ai-hint="composer writing"
+                  />
+              </div>
+               <div className="absolute -top-8 -right-12 w-40 h-56 transform rotate-12">
+                 <Image 
+                    src="https://placehold.co/400x600.png"
+                    alt="Sheet music close-up"
+                    fill
+                    className="rounded-lg object-cover shadow-xl border-4 border-card"
+                    data-ai-hint="sheet music"
+                  />
+              </div>
           </div>
         </div>
       </section>
