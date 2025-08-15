@@ -2,16 +2,27 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Music, Search, ShoppingCart } from 'lucide-react';
+import { Menu, Music, Search, ShoppingCart, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { navigationLinks } from '@/lib/navigation';
 import { SearchBar } from '../search-bar';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { useState } from 'react';
 
 export function Header() {
   const pathname = usePathname();
-  // Dummy cart count for UI purposes
+  // Dummy state for authentication
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const cartItemCount = 2;
 
   return (
@@ -64,7 +75,7 @@ export function Header() {
                   href={link.href}
                   className={cn(
                     'transition-colors hover:text-primary',
-                    pathname === link.href ? 'text-primary' : 'text-foreground/60'
+                    pathname === link.href ? 'text-primary' : 'text-foreground'
                   )}
                 >
                   {link.label}
@@ -90,9 +101,48 @@ export function Header() {
               </div>
             </Link>
           </Button>
-          <Button asChild>
-            <Link href="/upload">Upload</Link>
-          </Button>
+          {isLoggedIn ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                  <Avatar className="h-8 w-8">
+                    <AvatarImage src="https://placehold.co/100x100.png" alt="User" data-ai-hint="user avatar" />
+                    <AvatarFallback>U</AvatarFallback>
+                  </Avatar>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56" align="end" forceMount>
+                <DropdownMenuLabel className="font-normal">
+                  <div className="flex flex-col space-y-1">
+                    <p className="text-sm font-medium leading-none">Ayo Bankole</p>
+                    <p className="text-xs leading-none text-muted-foreground">
+                      ayo.bankole@example.com
+                    </p>
+                  </div>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                    <Link href="/profile"><User className="mr-2 h-4 w-4"/>Profile</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                    <Link href="/favorites"><Music className="mr-2 h-4 w-4"/>My Library</Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => setIsLoggedIn(false)}>
+                  Log out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <div className="hidden sm:flex items-center gap-2">
+                <Button variant="ghost" asChild>
+                    <Link href="/login">Login</Link>
+                </Button>
+                <Button asChild>
+                    <Link href="/signup">Sign Up</Link>
+                </Button>
+            </div>
+          )}
         </div>
       </div>
     </header>

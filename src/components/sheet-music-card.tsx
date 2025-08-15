@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { type SheetMusic } from '@/lib/dummy-data';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
+import { ArrowRight, ShoppingCart, Heart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 interface SheetMusicCardProps {
   music: SheetMusic;
@@ -14,6 +16,7 @@ interface SheetMusicCardProps {
 
 export function SheetMusicCard({ music }: SheetMusicCardProps) {
     const { toast } = useToast();
+    const [isFavorite, setIsFavorite] = useState(false);
 
     const handleAddToCart = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -25,6 +28,16 @@ export function SheetMusicCard({ music }: SheetMusicCardProps) {
             description: `${music.title} has been added to your shopping cart.`,
         });
     };
+
+    const handleToggleFavorite = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsFavorite(!isFavorite);
+        toast({
+            title: isFavorite ? "Removed from Favorites" : "Added to Favorites",
+            description: `${music.title} has been ${isFavorite ? 'removed from' : 'added to'} your favorites.`,
+        });
+    }
   
   return (
     <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
@@ -39,6 +52,16 @@ export function SheetMusicCard({ music }: SheetMusicCardProps) {
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 data-ai-hint="sheet music cover"
                 />
+                 <Button 
+                    size="icon" 
+                    className={cn(
+                        "absolute top-3 right-3 rounded-full h-9 w-9 bg-background/70 text-primary backdrop-blur-sm transition-all hover:bg-background/90",
+                        isFavorite && "text-red-500"
+                    )}
+                    onClick={handleToggleFavorite}
+                >
+                    <Heart className={cn("h-5 w-5", isFavorite && "fill-current")} />
+                </Button>
             </div>
             </CardHeader>
             <CardContent className="flex-grow p-4">

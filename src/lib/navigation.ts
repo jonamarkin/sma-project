@@ -8,4 +8,5 @@ export const navigationLinks: NavLink[] = [
   { href: '/events', label: 'Events' },
   { href: '/blog', label: 'Blog' },
   { href: '/recommendations', label: 'AI Tools' },
+  { href: '/favorites', label: 'Favorites' },
 ];
