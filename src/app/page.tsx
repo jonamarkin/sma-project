@@ -41,11 +41,11 @@ export default function Home() {
           <div className="relative h-80 w-full lg:h-full">
              <Image 
                 src="https://placehold.co/800x600.png"
-                alt="African choir singing"
+                alt="African musicians playing guitars in front of sheet music"
                 fill
                 priority
                 className="rounded-lg object-cover shadow-2xl"
-                data-ai-hint="african choir"
+                data-ai-hint="african musicians"
               />
           </div>
         </div>
