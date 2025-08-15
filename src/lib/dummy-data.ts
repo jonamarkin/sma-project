@@ -5,7 +5,11 @@ export interface SheetMusic {
   price: number;
   description: string;
   imageUrl: string;
-  category: string;
+  category: string; // e.g., Sacred, Secular, Gospel
+  voicing: 'SATB' | 'SSAA' | 'TTBB' | 'SAB' | 'Unison';
+  difficulty: 'Easy' | 'Intermediate' | 'Advanced';
+  occasion: 'General' | 'Christmas' | 'Easter' | 'Wedding';
+  country: string;
   previewUrl: string; // URL to a score image snippet
 }
 
@@ -40,6 +44,10 @@ export const sheetMusicData: SheetMusic[] = [
     description: 'A powerful and moving choral piece celebrating liberation and unity. Written in a traditional Yoruba folk style.',
     imageUrl: 'https://placehold.co/600x800.png',
     category: 'Sacred Choral',
+    voicing: 'SATB',
+    difficulty: 'Intermediate',
+    occasion: 'General',
+    country: 'Nigeria',
     previewUrl: 'https://placehold.co/800x400.png',
   },
   {
@@ -50,6 +58,10 @@ export const sheetMusicData: SheetMusic[] = [
     description: 'A light and lyrical composition for SATB choir, evoking the vast and beautiful landscapes of the East African savannah.',
     imageUrl: 'https://placehold.co/600x800.png',
     category: 'Secular Choral',
+    voicing: 'SAB',
+    difficulty: 'Easy',
+    occasion: 'General',
+    country: 'Kenya',
     previewUrl: 'https://placehold.co/800x400.png',
   },
   {
@@ -60,6 +72,10 @@ export const sheetMusicData: SheetMusic[] = [
     description: 'A classic piece of African liturgical music, this Kyrie is based on traditional Congolese folk melodies.',
     imageUrl: 'https://placehold.co/600x800.png',
     category: 'Liturgical',
+    voicing: 'SATB',
+    difficulty: 'Intermediate',
+    occasion: 'General',
+    country: 'Congo',
     previewUrl: 'https://placehold.co/800x400.png',
   },
   {
@@ -70,6 +86,10 @@ export const sheetMusicData: SheetMusic[] = [
     description: 'A contemporary choral work that blends North African scales with Western harmonies to create a haunting and atmospheric sound.',
     imageUrl: 'https://placehold.co/600x800.png',
     category: 'Contemporary Classical',
+    voicing: 'SSAA',
+    difficulty: 'Advanced',
+    occasion: 'General',
+    country: 'Morocco',
     previewUrl: 'https://placehold.co/800x400.png',
   },
   {
@@ -80,6 +100,10 @@ export const sheetMusicData: SheetMusic[] = [
     description: 'An uplifting and rhythmic gospel piece inspired by the resilience and faith of communities along the Niger River.',
     imageUrl: 'https://placehold.co/600x800.png',
     category: 'Gospel',
+    voicing: 'SATB',
+    difficulty: 'Intermediate',
+    occasion: 'General',
+    country: 'Nigeria',
     previewUrl: 'https://placehold.co/800x400.png',
   },
   {
@@ -90,6 +114,38 @@ export const sheetMusicData: SheetMusic[] = [
     description: 'A vibrant and energetic festival piece combining Xhosa and Zulu rhythms, perfect for celebratory occasions.',
     imageUrl: 'https://placehold.co/600x800.png',
     category: 'Festival',
+    voicing: 'TTBB',
+    difficulty: 'Advanced',
+    occasion: 'Wedding',
+    country: 'South Africa',
+    previewUrl: 'https://placehold.co/800x400.png',
+  },
+  {
+    id: '7',
+    title: 'Easter Alleluia',
+    composer: 'Adama Traoré',
+    price: 11.00,
+    description: 'A joyous and accessible Alleluia setting for Easter services, with call-and-response sections.',
+    imageUrl: 'https://placehold.co/600x800.png',
+    category: 'Sacred Choral',
+    voicing: 'SAB',
+    difficulty: 'Easy',
+    occasion: 'Easter',
+    country: 'Mali',
+    previewUrl: 'https://placehold.co/800x400.png',
+  },
+  {
+    id: '8',
+    title: 'Christmas Lullaby',
+    composer: 'Chinwe Ojo',
+    price: 8.50,
+    description: 'A gentle and beautiful lullaby for Christmas, suitable for all choirs.',
+    imageUrl: 'https://placehold.co/600x800.png',
+    category: 'Sacred Choral',
+    voicing: 'Unison',
+    difficulty: 'Easy',
+    occasion: 'Christmas',
+    country: 'Nigeria',
     previewUrl: 'https://placehold.co/800x400.png',
   },
 ];

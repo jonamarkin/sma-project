@@ -8,8 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Loader, Music, Sparkles, ThumbsUp, XCircle } from 'lucide-react';
-import { Separator } from './ui/separator';
+import { Loader, Music, Sparkles, XCircle } from 'lucide-react';
 
 const initialState: RecommendationState = {};
 
@@ -27,15 +26,8 @@ export function MusicRecommendationForm() {
   const [state, formAction] = useFormState(handleRecommendMusic, initialState);
 
   return (
-    <Card>
       <form action={formAction}>
-        <CardHeader>
-          <CardTitle>Find Your Music</CardTitle>
-          <CardDescription>
-            Tell us what you need, and we&apos;ll suggest some music for you.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6 pt-6">
           <div className="space-y-2">
             <Label htmlFor="theme">Service/Event Theme</Label>
             <Input id="theme" name="theme" placeholder="e.g., Thanksgiving, Easter, Unity" required />
@@ -74,7 +66,7 @@ export function MusicRecommendationForm() {
           )}
 
           {state.result && (
-            <div className="w-full space-y-6 pt-6">
+            <div className="w-full space-y-6 pt-6 border-t mt-6">
               <div className="flex items-center gap-2">
                 <Sparkles className="h-6 w-6 text-primary" />
                 <h3 className="text-2xl font-bold font-headline">AI Recommendations</h3>
@@ -99,6 +91,5 @@ export function MusicRecommendationForm() {
           )}
         </CardFooter>
       </form>
-    </Card>
   );
 }

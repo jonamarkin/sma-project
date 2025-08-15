@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Music, Search } from 'lucide-react';
+import { Menu, Music, Search, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -11,6 +11,8 @@ import { SearchBar } from '../search-bar';
 
 export function Header() {
   const pathname = usePathname();
+  // Dummy cart count for UI purposes
+  const cartItemCount = 2;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -76,6 +78,18 @@ export function Header() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <SearchBar />
           </div>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="/cart" aria-label="Open shopping cart">
+              <div className="relative">
+                <ShoppingCart className="h-5 w-5" />
+                {cartItemCount > 0 && (
+                  <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                    {cartItemCount}
+                  </span>
+                )}
+              </div>
+            </Link>
+          </Button>
           <Button asChild>
             <Link href="/upload">Upload</Link>
           </Button>
