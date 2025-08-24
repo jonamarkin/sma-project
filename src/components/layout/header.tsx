@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Menu, Music, Search, ShoppingCart, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { cn } from '@/lib/utils';
-import { navigationLinks } from '@/lib/navigation';
-import { SearchBar } from '../search-bar';
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Menu, Music, Search, ShoppingCart, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import { navigationLinks } from "@/lib/navigation";
+import { SearchBar } from "../search-bar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,9 +16,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { useState } from 'react';
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { useState } from "react";
 
 export function Header() {
   const pathname = usePathname();
@@ -30,7 +31,7 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Music className="h-6 w-6 text-primary" />
+            <Image src="/logonobg.png" alt="Logo" width={32} height={32} />
             <span className="hidden font-bold sm:inline-block font-headline text-lg">
               Sheet Music Africa
             </span>
@@ -41,8 +42,8 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'transition-colors hover:text-primary',
-                  pathname === link.href ? 'text-primary' : 'text-foreground/60'
+                  "transition-colors hover:text-primary",
+                  pathname === link.href ? "text-primary" : "text-foreground/60"
                 )}
               >
                 {link.label}
@@ -65,7 +66,9 @@ export function Header() {
           <SheetContent side="left" className="pr-0">
             <Link href="/" className="flex items-center space-x-2">
               <Music className="h-6 w-6 text-primary" />
-              <span className="font-bold font-headline text-lg">Sheet Music Africa</span>
+              <span className="font-bold font-headline text-lg">
+                Sheet Music Africa
+              </span>
             </Link>
             <div className="my-4 h-px w-full bg-border" />
             <div className="flex flex-col space-y-3">
@@ -74,8 +77,8 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'transition-colors hover:text-primary',
-                    pathname === link.href ? 'text-primary' : 'text-foreground'
+                    "transition-colors hover:text-primary",
+                    pathname === link.href ? "text-primary" : "text-foreground"
                   )}
                 >
                   {link.label}
@@ -104,9 +107,16 @@ export function Header() {
           {isLoggedIn ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                <Button
+                  variant="ghost"
+                  className="relative h-8 w-8 rounded-full"
+                >
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="https://placehold.co/100x100.png" alt="User" data-ai-hint="user avatar" />
+                    <AvatarImage
+                      src="https://placehold.co/100x100.png"
+                      alt="User"
+                      data-ai-hint="user avatar"
+                    />
                     <AvatarFallback>U</AvatarFallback>
                   </Avatar>
                 </Button>
@@ -114,7 +124,9 @@ export function Header() {
               <DropdownMenuContent className="w-56" align="end" forceMount>
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col space-y-1">
-                    <p className="text-sm font-medium leading-none">Ayo Bankole</p>
+                    <p className="text-sm font-medium leading-none">
+                      Ayo Bankole
+                    </p>
                     <p className="text-xs leading-none text-muted-foreground">
                       ayo.bankole@example.com
                     </p>
@@ -122,10 +134,16 @@ export function Header() {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                    <Link href="/profile"><User className="mr-2 h-4 w-4"/>Profile</Link>
+                  <Link href="/profile">
+                    <User className="mr-2 h-4 w-4" />
+                    Profile
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                    <Link href="/favorites"><Music className="mr-2 h-4 w-4"/>My Library</Link>
+                  <Link href="/favorites">
+                    <Music className="mr-2 h-4 w-4" />
+                    My Library
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => setIsLoggedIn(false)}>
@@ -135,12 +153,12 @@ export function Header() {
             </DropdownMenu>
           ) : (
             <div className="hidden sm:flex items-center gap-2">
-                <Button variant="ghost" asChild>
-                    <Link href="/login">Login</Link>
-                </Button>
-                <Button asChild>
-                    <Link href="/signup">Sign Up</Link>
-                </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/login">Login</Link>
+              </Button>
+              <Button asChild>
+                <Link href="/signup">Sign Up</Link>
+              </Button>
             </div>
           )}
         </div>
