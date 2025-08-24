@@ -279,7 +279,7 @@ export const eventsData: ChoralEvent[] = [
     location: "Accra, Ghana",
     description:
       "A four-day festival featuring workshops, competitions, and gala concerts with choirs from across West Africa.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/events/image1.jpg",
     price: 50.0,
   },
   {
@@ -290,7 +290,7 @@ export const eventsData: ChoralEvent[] = [
     location: "Nairobi, Kenya",
     description:
       "An evening of classical and contemporary choral music, featuring works by Kenyan and international composers.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/events/image2.jpg",
     price: 25.0,
   },
   {
@@ -301,7 +301,7 @@ export const eventsData: ChoralEvent[] = [
     location: "Cape Town, South Africa",
     description:
       "One of Africa's most prestigious choral competitions, attracting top choirs from around the globe.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/events/image3.jpg",
     price: "Free",
   },
   {
@@ -312,7 +312,7 @@ export const eventsData: ChoralEvent[] = [
     location: "Lagos, Nigeria",
     description:
       "A one-day workshop open to all singers, focusing on vocal technique, harmony, and performance in the gospel tradition.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/events/image4.jpg",
     price: 15.0,
   },
 ];
@@ -327,7 +327,7 @@ export const blogData: BlogPost[] = [
       "From Nigeria to South Africa, a new generation of composers is redefining what it means to write choral music in Africa...",
     content:
       "<p>From Nigeria to South Africa, a new generation of composers is redefining what it means to write choral music in Africa. Blending traditional rhythms, languages, and instruments with Western classical forms, these artists are creating a sound that is both unique and universally appealing. This article explores the key figures, trends, and works that are shaping this exciting new movement.</p><p>We delve into the works of composers like Ayo Bankole and Joshua Uzoigwe, examining how they laid the groundwork for today's vibrant scene. We also look at the role of universities and cultural institutions in nurturing this new talent. The challenges, such as funding and international exposure, are significant, but the passion and creativity of these musicians are undeniable. The future of African choral music is bright, and the world is beginning to listen.</p>",
-    imageUrl: "https://placehold.co/800x500.png",
+    imageUrl: "/blogimg.jpg",
     tags: ["Contemporary", "Composers", "Analysis"],
   },
   {
@@ -339,7 +339,7 @@ export const blogData: BlogPost[] = [
       "South Africa boasts one of the richest and most diverse choral traditions in the world. From the powerful harmonies of Isicathamiya to the intricate rhythms of Maskandi...",
     content:
       "<p>South Africa boasts one of the richest and most diverse choral traditions in the world. From the powerful harmonies of Isicathamiya, famously brought to global attention by Ladysmith Black Mambazo, to the intricate rhythms of Maskandi-influenced choral works, the country is a treasure trove of vocal music. This guide provides an introduction to the major styles, key artists, and historical context you need to appreciate this incredible musical landscape.</p><p>We explore the call-and-response patterns common in Zulu choral music, the gospel influences that have shaped so much of the repertoire, and the role of choral singing in the struggle against apartheid. Whether you are a seasoned choral enthusiast or a newcomer to this music, this guide will deepen your understanding and appreciation of South Africa's vocal heritage.</p>",
-    imageUrl: "https://placehold.co/800x500.png",
+    imageUrl: "/blogimg2.jpg",
     tags: ["South Africa", "Isicathamiya", "Musicology"],
   },
   {
@@ -351,7 +351,7 @@ export const blogData: BlogPost[] = [
       "Sheet Music Africa is proud to announce the launch of our Digital Archive Project, an initiative to digitize and preserve rare and unpublished African sheet music...",
     content:
       "<p>Sheet Music Africa is proud to announce the launch of our Digital Archive Project, an initiative to digitize and preserve rare and unpublished African sheet music. For centuries, much of our continent's musical heritage has been passed down orally or existed in fragile manuscripts, vulnerable to loss and decay. This project aims to safeguard these cultural treasures for future generations.</p><p>Working with libraries, universities, and private collectors across the continent, we are creating high-quality digital scans of these works and making them accessible to musicians, scholars, and the public. This is a monumental task, and we are calling on our community to help. Learn more about how you can contribute to this vital effort to protect and celebrate Africa's musical legacy.</p>",
-    imageUrl: "https://placehold.co/800x500.png",
+    imageUrl: "/image4.jpg",
     tags: ["Preservation", "Community", "Sheet Music Africa"],
   },
 ];
